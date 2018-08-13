@@ -15,4 +15,5 @@ module com.jwebmp.plugins.skycons {
 	provides RenderAfterDynamicScripts with SkyconsPlayRenderer;
 
 	opens com.jwebmp.plugins.skycons.configurator;
+	opens com.jwebmp.plugins.skycons to com.jwebmp.core;
 }
