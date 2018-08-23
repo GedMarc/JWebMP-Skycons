@@ -6,7 +6,7 @@ import com.jwebmp.core.Feature;
  * The actual feature for the given component
  */
 public class SkyconFeature
-		extends Feature<SkyconOptions, SkyconFeature>
+		extends Feature<SkyconFeature, SkyconOptions, SkyconFeature>
 {
 
 	public SkyconFeature(Skycon<?> component)
