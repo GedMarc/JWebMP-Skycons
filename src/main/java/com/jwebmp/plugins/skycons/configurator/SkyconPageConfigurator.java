@@ -22,7 +22,10 @@ public class SkyconPageConfigurator
 	 * Field SkyconJavascriptReference
 	 */
 	private static final JavascriptReference SkyconJavascriptReference = new JavascriptReference("SkyconBase", 2.02, "bower_components/skycons/skycons.min.js");
-
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 	/**
 	 * Field colour
 	 */
@@ -31,6 +34,31 @@ public class SkyconPageConfigurator
 	public SkyconPageConfigurator()
 	{
 		//No Config Required
+	}
+
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return SkyconPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		SkyconPageConfigurator.enabled = mustEnable;
 	}
 
 	/**
@@ -83,5 +111,11 @@ public class SkyconPageConfigurator
 		}
 
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return SkyconPageConfigurator.enabled;
 	}
 }
