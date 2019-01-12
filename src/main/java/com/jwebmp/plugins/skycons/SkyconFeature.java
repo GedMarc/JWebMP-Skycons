@@ -22,7 +22,7 @@ public class SkyconFeature
 	}
 
 	@Override
-	protected Skycon<?> getComponent()
+	public Skycon<?> getComponent()
 	{
 		return (Skycon) super.getComponent();
 	}
