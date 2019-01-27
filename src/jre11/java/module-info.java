@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.skycons.configurator.SkyconPageConfigurator;
-import com.jwebmp.plugins.skycons.implementations.SkyconsExclusionsModule;
-
 module com.jwebmp.plugins.skycons {
 	exports com.jwebmp.plugins.skycons;
 	exports com.jwebmp.plugins.skycons.configurator;
@@ -13,10 +7,10 @@ module com.jwebmp.plugins.skycons {
 	requires com.jwebmp.interception;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with SkyconPageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.skycons.configurator.SkyconPageConfigurator;
 
-	provides IGuiceScanModuleExclusions with SkyconsExclusionsModule;
-	provides IGuiceScanJarExclusions with SkyconsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.skycons.implementations.SkyconsExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.skycons.implementations.SkyconsExclusionsModule;
 
 	opens com.jwebmp.plugins.skycons.configurator;
 	opens com.jwebmp.plugins.skycons to com.jwebmp.core;
