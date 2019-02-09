@@ -103,7 +103,7 @@ public class SkyconPageConfigurator
 	@Override
 	public @NotNull Page<?> configure(Page<?> page)
 	{
-		if (!page.isConfigured())
+		if (!page.isConfigured() && enabled())
 		{
 			page.addJavaScriptReference(SkyconPageConfigurator.SkyconJavascriptReference);
 			page.addVariable("skycons");
