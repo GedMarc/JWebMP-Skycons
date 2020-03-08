@@ -10,7 +10,6 @@ module com.jwebmp.plugins.skycons {
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.skycons.configurator.SkyconPageConfigurator;
 
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.skycons.implementations.SkyconsExclusionsModule;
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.skycons.implementations.SkyconsExclusionsModule;
 
 	opens com.jwebmp.plugins.skycons.configurator;
 	opens com.jwebmp.plugins.skycons to com.jwebmp.core;
