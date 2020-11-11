@@ -2,7 +2,7 @@ package com.jwebmp.plugins.skycons.configurator;
 
 import com.jwebmp.core.Feature;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class SkyconStartFeature
 		extends Feature

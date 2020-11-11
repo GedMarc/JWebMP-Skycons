@@ -2,7 +2,7 @@ package com.jwebmp.plugins.skycons;
 
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * The options available for the skycons

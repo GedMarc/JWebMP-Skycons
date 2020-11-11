@@ -3,7 +3,7 @@ package com.jwebmp.plugins.skycons;
 import com.jwebmp.core.base.html.Canvas;
 import com.jwebmp.plugins.skycons.configurator.SkyconStartFeature;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public class Skycon<J extends Skycon<J>>
 		extends Canvas<J>
