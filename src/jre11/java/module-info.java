@@ -3,7 +3,7 @@ module com.jwebmp.plugins.skycons {
 	exports com.jwebmp.plugins.skycons.configurator;
 
 	requires com.jwebmp.core;
-	requires java.validation;
+	requires jakarta.validation;
 	requires com.jwebmp.interception;
 	requires com.guicedee.guicedinjection;
 
