@@ -6,7 +6,7 @@ import com.jwebmp.core.Feature;
  * The actual feature for the given component
  */
 public class SkyconFeature
-		extends Feature<SkyconFeature, SkyconOptions, SkyconFeature>
+		extends Feature<SkyconFeature, SkyconOptions<?>, SkyconFeature>
 {
 
 	public SkyconFeature(Skycon<?> component)
@@ -18,16 +18,16 @@ public class SkyconFeature
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-		addQuery("skycons.add(\"" + getComponent().getID() + "\", '" + getComponent().getIcon() + "');");
+		addQuery("skycons.add(\"" + getComponent().asBase().getID() + "\", '" + getComponent().getIcon() + "');");
 	}
 
 	@Override
 	public Skycon<?> getComponent()
 	{
-		return (Skycon) super.getComponent();
+		return (Skycon<?>) super.getComponent();
 	}
 
-	public Feature setComponent(Skycon<?> component)
+	public SkyconFeature setComponent(Skycon<?> component)
 	{
 		return super.setComponent(component);
 	}

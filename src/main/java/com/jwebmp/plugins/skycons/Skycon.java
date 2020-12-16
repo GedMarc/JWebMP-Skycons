@@ -36,8 +36,30 @@ public class Skycon<J extends Skycon<J>>
 	}
 
 	@Override
-	public SkyconOptions getOptions()
+	public SkyconOptions<?> getOptions()
 	{
 		return feature.getOptions();
+	}
+	
+	public SkyconFeature getFeature()
+	{
+		return feature;
+	}
+	
+	public Skycon<J> setFeature(SkyconFeature feature)
+	{
+		this.feature = feature;
+		return this;
+	}
+	
+	public SkyconStartFeature getStartFeature()
+	{
+		return startFeature;
+	}
+	
+	public Skycon<J> setStartFeature(SkyconStartFeature startFeature)
+	{
+		this.startFeature = startFeature;
+		return this;
 	}
 }
