@@ -1,6 +1,7 @@
 package com.jwebmp.plugins.skycons;
 
 import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.DivSimple;
 import org.junit.jupiter.api.Test;
 
 class SkyconTest
@@ -16,11 +17,11 @@ class SkyconTest
 	@Test
 	void testPage()
 	{
-		Page p = new Page();
+		Page<?> p = new Page();
 		p.getOptions()
 		 .setDynamicRender(false);
 		Skycon<?> icon = new Skycon<>("icon1", 60, SkyIcon.Partly_Cloudy_Day);
-		p.add(icon);
+		p.add(new DivSimple<>().add(icon));
 
 		System.out.println(p.toString(0));
 	}
