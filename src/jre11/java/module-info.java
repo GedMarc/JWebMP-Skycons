@@ -6,7 +6,6 @@ module com.jwebmp.plugins.skycons {
 
 	requires com.jwebmp.core;
 	requires jakarta.validation;
-	requires com.jwebmp.interception;
 	requires com.guicedee.guicedinjection;
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.skycons.configurator.SkyconPageConfigurator;
